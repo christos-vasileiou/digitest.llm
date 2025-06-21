@@ -2,7 +2,12 @@
 
 ## Overview
 
-`digitest.llm` is an interactive tool that uses a fine-tuned Llama-2-7b-chat model to generate test vectors for integrated circuit fault testing. The tool is specifically designed for Automatic Test Pattern Generation (ATPG) and can analyze structural Verilog netlists to produce test vectors that detect stuck-at faults.
+`digitest.llm` is an interactive tool for Automatic Test Pattern Generation (ATPG) using a fine-tuned Llama-2-7b-chat model. It analyzes structural Verilog netlists to generate test vectors for detecting stuck-at faults.
+
+### Research Goal
+The objective is not to replace existing ATPG workflows, but to explore how a specialized LLM can autonomously perform test generation as a language-based reasoning task. We aim to uncover new opportunities for adaptability and automation in ATPG.
+
+> **Note**: The model's performance is sensitive to how the user prompt is structured. Feedback for improving its robustness is highly appreciated!
 
 ## Features
 
@@ -22,9 +27,6 @@ cd digitest.llm
 
 ### 2. Install Dependencies
 ```bash
-# Install from the parent directory requirements
-pip install -r ../requirements.txt
-
 # Or install core dependencies manually
 pip install torch==2.5.1 transformers==4.49.0 peft==0.13.2
 ```
