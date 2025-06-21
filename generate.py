@@ -7,9 +7,9 @@ model_name = "meta-llama/Llama-2-7b-chat-hf"
 log_model_name = 'chrivasileiou/digitest'
 subfolder = 'grpo_adapter'
 adapter_name = 'grpo_adapter'
-example_prompt = True
+example_prompt = False
 
-device = torch.device('cuda:3')
+device = torch.device('cuda')
 model = AutoModelForCausalLM.from_pretrained(model_name, 
                                              torch_dtype=torch.bfloat16, 
                                              device_map=device,
@@ -60,4 +60,4 @@ while True:
   gc.collect()
 
   example_prompt = False
-  print("\n\n--------------------------------\n\n")
+  print("--------------------------------\n\n")
