@@ -1,4 +1,4 @@
-# digitest.llm - ATPG Test Vector Generation Tool
+# digitest.llm - Digital Testing LLM for Test Vector Generation
 
 ## Overview
 
